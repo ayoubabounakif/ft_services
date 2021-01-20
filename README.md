@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 
 **4 - StackOverFlow:**<br/>
 > *Bash:* https://stackoverflow.com/questions/43801947/bash-get-return-value-of-a-command-and-exit-with-this-value<br/>
-> *InfluxDB -p 8088:*https://stackoverflow.com/questions/40844762/influxdb-port-8088<br/>
+> *InfluxDB -p 8088:* https://stackoverflow.com/questions/40844762/influxdb-port-8088<br/>
 
 **5 - Basic Docker Commands:**
 ```
