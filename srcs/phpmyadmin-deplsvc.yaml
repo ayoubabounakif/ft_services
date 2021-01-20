@@ -1,0 +1,41 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: phpmyadmin-service
+  annotations:
+    metallb.universe.tf/allow-shared-ip: ft_services
+spec:
+  selector:
+    app: phpmyadmin
+  ports:
+    - port: 5000
+      targetPort: 5000
+  type: LoadBalancer
+  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: phpmyadmin
+    spec:
+      containers:
+        - name: phpmyadmin
+          image: local-phpmyadmin
+          imagePullPolicy: Never
+          # livenessProbe:
+          #   exec:
+          #     command:
+          #     - /bin/sh
+          #     - /livenessprobe.sh
+          ports:
+            - containerPort: 5000
+  selector:
+    matchLabels:
+      app: phpmyadmin 

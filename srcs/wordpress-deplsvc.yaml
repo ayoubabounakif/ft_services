@@ -1,0 +1,40 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: wordpress-service
+  annotations:
+    metallb.universe.tf/allow-shared-ip: ft_services
+spec:
+  selector:
+    app: wordpress
+  ports:
+    - port: 5050
+      targetPort: 5050
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+        - name: wordpress
+          image: local-wordpress
+          imagePullPolicy: Never
+          # livenessProbe:
+          #   exec:
+          #     command:
+          #     - /bin/sh
+          #     - /livenessprobe.sh
+          ports:
+            - containerPort: 5050
+  selector:
+    matchLabels:
+      app: wordpress 
