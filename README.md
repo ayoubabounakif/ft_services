@@ -16,6 +16,7 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 > *Grafana:* https://grafana.com/docs/grafana/latest/getting-started/getting-started/<br/>
 > *FTPS:* https://wiki.alpinelinux.org/wiki/FTP#vsftpd_Configuration<br/>
 > *FTPS:* https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-on-ubuntu-12-04<br/>
+> *PASV:* https://www.webopedia.com/definitions/pasv/<br/>
 
 **4 - StackOverFlow:**<br/>
 > *Bash:* https://stackoverflow.com/questions/43801947/bash-get-return-value-of-a-command-and-exit-with-this-value<br/>
