@@ -1,0 +1,37 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ftps-service
+  annotations:
+    metallb.universe.tf/allow-shared-ip: ft_services
+spec:
+  selector:
+    app: ftps
+  ports:
+    - port: 21
+      protocol: TCP
+      targetPort: 21
+      name: ftps
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ftps-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ftps
+    spec:
+      containers:
+        - name: ftps
+          image: ftps
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 21
+  selector:
+    matchLabels:
+      app: ftps 

@@ -1,8 +1,8 @@
 FROM alpine:3.12
 
-RUN apk update && apk add nginx \
+RUN apk update && apk add nginx && apk add openssl \
     && apk add sudo && apk add bash \
-    && apk add openrc && apk add libc6-compat
+    && apk add openrc && apk add libc6-compat 
 
 RUN adduser -D -g 'www' www
 RUN mkdir -p /www
@@ -29,7 +29,6 @@ COPY index.html /www/index.html
 COPY nginx-script.sh /
 RUN chmod +x nginx-script.sh
 
-RUN apk add openssl
 RUN openssl req -x509 -nodes -days 365 -subj "/C=MA/ST=BG/O=aabounak, Inc./CN=localhost" -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 
 RUN sudo openrc reboot
