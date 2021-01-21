@@ -14,12 +14,18 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 > *MetalLB Configuration:* https://metallb.universe.tf/configuration/<br/>
 > ~~Supervisor: http://supervisord.org/configuration.html~~<br/>
 > *Grafana:* https://grafana.com/docs/grafana/latest/getting-started/getting-started/<br/>
+> *FTPS:* https://wiki.alpinelinux.org/wiki/FTP#vsftpd_Configuration<br/>
+> *FTPS:* https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-on-ubuntu-12-04<br/>
 
 **4 - StackOverFlow:**<br/>
 > *Bash:* https://stackoverflow.com/questions/43801947/bash-get-return-value-of-a-command-and-exit-with-this-value<br/>
 > *InfluxDB -p 8088:* https://stackoverflow.com/questions/40844762/influxdb-port-8088<br/>
 
-**5 - Basic Docker Commands:**
+**5 - Digital Ocean:**<br/>
+> *FTPS:* https://www.digitalocean.com/community/questions/cannot-connect-to-ftp-through-filezilla<br/>
+> *FTPS SSL:* https://www.digitalocean.com/community/tutorials/how-to-configure-vsftpd-to-use-ssl-tls-on-an-ubuntu-vps<br/>
+
+**6 - Basic Docker Commands:**
 ```
 # Build a docker image from a Dockerfile
 docker build -t {IMAGE_NAME} {DOCKERFILE_DIR}
@@ -42,7 +48,7 @@ docker kill {CONTAINER ID}
 # Delete all unused Docker images and cache
 docker system prune
 ```
-**6 - Managing Pods With Kubernetes:**
+**7 - Managing Pods With Kubernetes:**
 ```
 # Create a pod from a YAML file
 kubectl create -f {FILE_NAME.yaml}
