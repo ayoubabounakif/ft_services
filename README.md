@@ -15,7 +15,6 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 > ~~Supervisor: http://supervisord.org/configuration.html~~<br/>
 > *Grafana:* https://grafana.com/docs/grafana/latest/getting-started/getting-started/<br/>
 > *FTPS:* https://wiki.alpinelinux.org/wiki/FTP#vsftpd_Configuration<br/>
-> *FTPS:* https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-on-ubuntu-12-04<br/>
 > *PASV:* https://www.webopedia.com/definitions/pasv/<br/>
 
 **4 - StackOverFlow:**<br/>
@@ -23,8 +22,9 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 > *InfluxDB -p 8088:* https://stackoverflow.com/questions/40844762/influxdb-port-8088<br/>
 
 **5 - Digital Ocean:**<br/>
-> *FTPS:* https://www.digitalocean.com/community/questions/cannot-connect-to-ftp-through-filezilla<br/>
+> *FTPS:* https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-on-ubuntu-12-04<br/>
 > *FTPS SSL:* https://www.digitalocean.com/community/tutorials/how-to-configure-vsftpd-to-use-ssl-tls-on-an-ubuntu-vps<br/>
+> *FTPS:* https://www.digitalocean.com/community/questions/cannot-connect-to-ftp-through-filezilla<br/>
 
 **6 - Basic Docker Commands:**
 ```
