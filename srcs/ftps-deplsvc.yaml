@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: ftps
-          image: ftps
+          image: local-ftps
           imagePullPolicy: Never
           ports:
             - containerPort: 21
