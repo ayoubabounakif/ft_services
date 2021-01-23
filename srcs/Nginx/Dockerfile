@@ -35,6 +35,6 @@ RUN sudo openrc reboot
 
 EXPOSE 80
 EXPOSE 443
-EXPOSE 22
+EXPOSE 2222
 
 ENTRYPOINT ["sh", "/nginx-script.sh"]
