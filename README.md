@@ -16,6 +16,8 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 > *Grafana:* https://grafana.com/docs/grafana/latest/getting-started/getting-started/<br/>
 > *FTPS:* https://wiki.alpinelinux.org/wiki/FTP#vsftpd_Configuration<br/>
 > *PASV:* https://www.webopedia.com/definitions/pasv/<br/>
+> *Reverse Proxy (Theory):* https://www.nginx.com/resources/glossary/reverse-proxy-vs-load-balancer/<br/>
+> *Reverse Proxy (Execution):* https://www.linode.com/docs/guides/use-nginx-reverse-proxy/<br/>
 
 **4 - StackOverFlow:**<br/>
 > *Bash:* https://stackoverflow.com/questions/43801947/bash-get-return-value-of-a-command-and-exit-with-this-value<br/>
