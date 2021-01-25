@@ -7,7 +7,7 @@ RUN apk update && apk add nginx && apk add php7 php7-fpm php7-opcache php7-gd ph
 
 RUN mkdir -p /var/aabounak/
 
-COPY default.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY phpmyadmin-script.sh /
 RUN chmod +x phpmyadmin-script.sh
 
