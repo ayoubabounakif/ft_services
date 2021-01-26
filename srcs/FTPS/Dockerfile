@@ -17,10 +17,9 @@ COPY telegraf.conf /etc/telegraf/telegraf.conf
 
 ## FTPS Conf
 RUN adduser admin -D && echo "admin:aabounak" | chpasswd
-RUN mkdir -p /home/admin/ftp/files
-RUN chmod 550 /home/admin/ftp && chmod 750 /home/admin/ftp/files && chown -R admin: /home/admin/ftp/
-RUN openssl req -x509 -nodes -days 365 -subj "/C=MA/ST=BG/O=aabounak, Inc./CN=localhost" -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.pem -out /etc/ssl/private/vsftpd.pem
+
 COPY vsftpd.conf /etc/vsftpd/
+COPY vsftpd.pem /etc/ssl/
 
 COPY ftps-script.sh /
 RUN sudo chmod +x /ftps-script.sh
