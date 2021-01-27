@@ -31,10 +31,19 @@ RUN chmod +x nginx-script.sh
 
 RUN openssl req -x509 -nodes -days 365 -subj "/C=MA/ST=BG/O=aabounak, Inc./CN=localhost" -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 
+# /usr/sbin/sshd 
+# ssh aabounak_ssh@$(minikube ip)
+
+# SSH
+RUN adduser aabounak_ssh -D && echo "aabounak_ssh:aabounak" | chpasswd
+RUN ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '' -t rsa
+RUN ssh-keygen -f /etc/ssh/ssh_host_dsa_key -N '' -t dsa
+
+
 RUN sudo openrc reboot
 
 EXPOSE 80
 EXPOSE 443
-EXPOSE 2222
+EXPOSE 22
 
 ENTRYPOINT ["sh", "/nginx-script.sh"]
