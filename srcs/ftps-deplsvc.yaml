@@ -13,6 +13,12 @@ spec:
       protocol: TCP
       targetPort: 21
       name: ftps
+    - port: 30000
+      name: first
+      targetPort: 30000
+    - port: 30001
+      name: second
+      targetPort: 30001
   type: LoadBalancer
 ---
 apiVersion: apps/v1
@@ -32,6 +38,8 @@ spec:
           imagePullPolicy: Never
           ports:
             - containerPort: 21
+            - containerPort: 30000
+            - containerPort: 30001
   selector:
     matchLabels:
       app: ftps 

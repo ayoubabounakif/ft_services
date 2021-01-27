@@ -18,6 +18,8 @@ COPY telegraf.conf /etc/telegraf/telegraf.conf
 ## FTPS Conf
 RUN adduser admin -D && echo "admin:aabounak" | chpasswd
 
+RUN chmod 777 vsftpd.conf
+
 COPY vsftpd.conf /etc/vsftpd/
 COPY vsftpd.pem /etc/ssl/
 

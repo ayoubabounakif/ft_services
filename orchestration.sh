@@ -2,6 +2,11 @@ minikube delete
 minikube start
 eval $(minikube -p minikube docker-env)
 
+sed -i '' s/CIP/$(minikube ip)/g ./srcs/metallb-configmap.yaml
+sed -i '' s/CIP/$(minikube ip)/g ./srcs/Nginx/default.conf
+sed -i '' s/CIP/$(minikube ip)/g ./srcs/FTPS/vsftpd.conf
+sed -i '' s/CIP/$(minikube ip)/g ./srcs/MySQL/wp_database.sql
+
 docker build -t local-nginx srcs/Nginx/
 docker build -t local-mysql srcs/MySQL/
 docker build -t local-wordpress srcs/WordPress/
@@ -26,5 +31,10 @@ kubectl apply -f srcs/influxdb-deplsvc.yaml
 kubectl apply -f srcs/grafana-deplsvc.yaml
 kubectl apply -f srcs/ftps-deplsvc.yaml
 
+
 kubectl get pods
-minikube start
+
+sed -i '' s/$(minikube ip)/CIP/g ./srcs/metallb-configmap.yaml
+sed -i '' s/$(minikube ip)/CIP/g ./srcs/Nginx/default.conf
+sed -i '' s/$(minikube ip)/CIP/g ./srcs/FTPS/vsftpd.conf
+sed -i '' s/$(minikube ip)/CIP/g ./srcs/MySQL/wp_database.sql
