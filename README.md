@@ -32,41 +32,44 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 **6 - Basic Docker Commands:**
 ```
 # Build a docker image from a Dockerfile
-docker build -t {IMAGE_NAME} {DOCKERFILE_DIR}
+docker build -t {IMAGE_NAME} {DOCKERFILE_DIR}<br/>
 # Start an instance of a docker image
-docker run -it -p {SPECIFY_PORT} -d {IMAGE_NAME}
-(-it stands for --> interactive terminal)
-(-d stands for ---> detached mode)
+docker run -it -p {SPECIFY_PORT} -d {IMAGE_NAME}<br/>
+(-it stands for --> interactive terminal)<br/>
+(-d stands for ---> detached mode)<br/>
 # See all images
-docker images
+docker images<br/>
 # Start a container
-docker start {CONTAINER ID}
+docker start {CONTAINER ID}<br/>
 # See running containers
-docker ps
+docker ps<br/>
 # See unrunning container
-docker ps -a
+docker ps -a<br/>
 # Get a shell in a container
-docker exec -it {CONTAINER ID} sh
+docker exec -it {CONTAINER ID} sh<br/>
 # Stop a container
-docker kill {CONTAINER ID}
+docker kill {CONTAINER ID}<br/>
 # Delete all unused Docker images and cache
-docker system prune
+docker system prune<br/>
 ```
 **7 - Managing Pods With Kubernetes:**
 ```
 # Create a pod from a YAML file
-kubectl create -f {FILE_NAME.yaml}
+kubectl create -f {FILE_NAME.yaml}<br/>
 # Delete a pod
 kubectl delete deployment {DEPLOYMENT}
-kubectl delete service {SERVICE}
+kubectl delete service {SERVICE}<br/>
 # Get a shell in a pod
-kubectl exec -it <POD_NAME> -- /bin/sh
+kubectl exec -it <POD_NAME> -- /bin/sh<br/>
 # Restart a deployment
-kubectl rollout restart deployment {NAME}
+kubectl rollout restart deployment {NAME}<br/>
 # Launch minikube dashboard
-minikube dashboard
+minikube dashboard<br/>
 # Get cluster external IP
-minikube ip
+minikube ip<br/>
 # Reset Minikube VM
-minikube delete
+minikube delete<br/>
 ```
+
+**Extra - For more information about the project and more ressources, visit Jean-Xavierre's github:**
+> https://github.com/Jean-xavierr/42Ft_services/blob/master/README.md<br/>
