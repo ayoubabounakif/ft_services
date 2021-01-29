@@ -32,44 +32,58 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 **6 - Basic Docker Commands:**
 ```
 # Build a docker image from a Dockerfile
-docker build -t {IMAGE_NAME} {DOCKERFILE_DIR}<br/>
+docker build -t {IMAGE_NAME} {DOCKERFILE_DIR}
+
 # Start an instance of a docker image
-docker run -it -p {SPECIFY_PORT} -d {IMAGE_NAME}<br/>
-(-it stands for --> interactive terminal)<br/>
-(-d stands for ---> detached mode)<br/>
+docker run -it -p {SPECIFY_PORT} -d {IMAGE_NAME}
+(-it stands for --> interactive terminal)
+(-d stands for ---> detached mode)
+
 # See all images
-docker images<br/>
+docker images
+
 # Start a container
-docker start {CONTAINER ID}<br/>
+docker start {CONTAINER ID}
+
 # See running containers
-docker ps<br/>
+docker ps
+
 # See unrunning container
-docker ps -a<br/>
+docker ps -a
+
 # Get a shell in a container
-docker exec -it {CONTAINER ID} sh<br/>
+docker exec -it {CONTAINER ID} sh
+
 # Stop a container
-docker kill {CONTAINER ID}<br/>
+docker kill {CONTAINER ID}
+
 # Delete all unused Docker images and cache
-docker system prune<br/>
+docker system prune
 ```
 **7 - Managing Pods With Kubernetes:**
 ```
 # Create a pod from a YAML file
-kubectl create -f {FILE_NAME.yaml}<br/>
+kubectl create -f {FILE_NAME.yaml}
+
 # Delete a pod
 kubectl delete deployment {DEPLOYMENT}
-kubectl delete service {SERVICE}<br/>
+kubectl delete service {SERVICE}
+
 # Get a shell in a pod
-kubectl exec -it <POD_NAME> -- /bin/sh<br/>
+kubectl exec -it <POD_NAME> -- /bin/sh
+
 # Restart a deployment
-kubectl rollout restart deployment {NAME}<br/>
+kubectl rollout restart deployment {NAME}
+
 # Launch minikube dashboard
-minikube dashboard<br/>
+minikube dashboard
+
 # Get cluster external IP
-minikube ip<br/>
+minikube ip
+
 # Reset Minikube VM
-minikube delete<br/>
+minikube delete
 ```
 
 **Extra - For more information about the project and more ressources, visit Jean-Xavierre's github:**
-> https://github.com/Jean-xavierr/42Ft_services/blob/master/README.md<br/>
+> *Link:* https://github.com/Jean-xavierr/42Ft_services/blob/master/README.md<br/>
