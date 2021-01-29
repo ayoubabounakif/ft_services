@@ -1,6 +1,6 @@
 # 42cursus-ft_services
 
-**1 - Kubernetes Tutorial:**<br?>
+**1 - Kubernetes Tutorial:**<br/>
 Nana: https://www.youtube.com/watch?v=X48VuDVv0do<br/>
 Important Kuberetes Concepts: https://kubernetes.io/docs/concepts/<br/>
 
