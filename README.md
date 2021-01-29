@@ -1,8 +1,8 @@
 # 42cursus-ft_services
 
 **1 - Kubernetes Tutorial:**<br/>
-Nana: https://www.youtube.com/watch?v=X48VuDVv0do<br/>
-Important Kuberetes Concepts: https://kubernetes.io/docs/concepts/<br/>
+> *Nana:* https://www.youtube.com/watch?v=X48VuDVv0do<br/>
+> *Important Kuberetes Concepts:* https://kubernetes.io/docs/concepts/<br/>
 
 **2 - Kubernetes YAML File Explained - Deployment and Service:**
 https://www.youtube.com/watch?v=qmDzcu5uY1I
