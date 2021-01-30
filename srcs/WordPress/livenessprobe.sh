@@ -1,10 +1,10 @@
-#!/bin/sh
-rc-service nginx status
-return_nginx=$?
-rc-service /telegraf-1.17.0/usr/bin/telegraf status
-return_telegraf=$?
-if [ $return_nginx = 0 && $return_telegraf = 0 ]; then
-	exit 0
+#! /bin/ash
+ps > liveness.tmp
+cat liveness.tmp | grep "php -S" > liveness2.tmp
+return=$(cat liveness2.tmp | wc -l)
+if [ $return = 1 ]
+then
+    return 0
 else
-	exit 1
+    return 1
 fi

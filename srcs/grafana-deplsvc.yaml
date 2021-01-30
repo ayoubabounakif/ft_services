@@ -28,6 +28,15 @@ spec:
         - name: grafana
           image: local-grafana
           imagePullPolicy: Never
+          args:
+          - /bin/ash
+          - -c
+          - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+          livenessProbe:
+            exec:
+              command:
+              - cat
+              - /tmp/healthy
           ports:
             - containerPort: 3000
   selector:
