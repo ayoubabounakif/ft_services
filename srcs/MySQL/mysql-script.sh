@@ -1,5 +1,6 @@
 sudo openrc reboot
 /etc/init.d/mariadb setup
+
 pkill mariadb
 rc-service mariadb start
 

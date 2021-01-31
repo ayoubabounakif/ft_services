@@ -46,7 +46,7 @@ spec:
               command:
                 - /bin/sh
                 - /livenessprobe.sh
-            initialDelaySeconds: 5
+            initialDelaySeconds: 10
             periodSeconds: 5
         ports:
           - containerPort: 8086
