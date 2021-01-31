@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 **3 - Extra Ressources:**<br/>
 > *MySQL:* https://linuxize.com/post/mysql-remote-access/<br/>
 > *MySQL:* https://linuxize.com/post/how-to-show-databases-in-mysql/<br/>
-> *Mysql:* https://gridscale.io/en/community/tutorials/mysql-datenbank-erstellen-loeschen/#:~:text=To%20do%20delete%20a%20database,database%20you%20want%20to%20delete.<br/>
+> *MySQL:* https://gridscale.io/en/community/tutorials/mysql-datenbank-erstellen-loeschen/#:~:text=To%20do%20delete%20a%20database,database%20you%20want%20to%20delete.<br/>
 > *MetalLB Installation:* https://metallb.universe.tf/installation/<br/>
 > *MetalLB Configuration:* https://metallb.universe.tf/configuration/<br/>
 > ~~Supervisor: http://supervisord.org/configuration.html~~<br/>
