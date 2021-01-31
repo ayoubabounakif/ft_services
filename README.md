@@ -21,6 +21,7 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 > *Reverse Proxy (Execution):* https://www.linode.com/docs/guides/use-nginx-reverse-proxy/<br/>
 > *SSH:* https://forhjy.medium.com/42-ft-services-install-nginx-with-kubernetes-fd22a5fcb062<br/>
 > *Liveness Probe:* https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/<br/>
+> *LP & RP:* https://developers.redhat.com/blog/2020/11/10/you-probably-need-liveness-and-readiness-probes/<br/>
 
 **4 - StackOverFlow:**<br/>
 > *Bash:* https://stackoverflow.com/questions/43801947/bash-get-return-value-of-a-command-and-exit-with-this-value<br/>
