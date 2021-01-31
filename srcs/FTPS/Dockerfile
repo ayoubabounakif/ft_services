@@ -21,6 +21,10 @@ RUN adduser admin -D && echo "admin:aabounak" | chpasswd
 COPY vsftpd.conf /etc/vsftpd/
 COPY vsftpd.pem /etc/ssl/
 
+# Process Manager
+COPY livenessprobe.sh /
+RUN chmod +x /livenessprobe.sh
+
 COPY ftps-script.sh /
 RUN sudo chmod +x /ftps-script.sh
 

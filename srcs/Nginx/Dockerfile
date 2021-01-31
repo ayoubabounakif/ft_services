@@ -11,11 +11,6 @@ RUN chown -R www:www /www
 RUN mkdir -p /run/nginx
 RUN touch /run/nginx/nginx.pid  
 
-# Process Manager
-# ADD livenessprobe.sh /
-# RUN apk add --no-cache supervisor
-# COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
 ADD https://dl.influxdata.com/telegraf/releases/telegraf-1.17.0_linux_amd64.tar.gz /
 RUN tar xf telegraf-1.17.0_linux_amd64.tar.gz
 RUN rm telegraf-1.17.0_linux_amd64.tar.gz
@@ -25,6 +20,10 @@ COPY telegraf.conf /etc/telegraf/telegraf.conf
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 COPY index.html /www/index.html
+
+# Process Manager
+COPY livenessprobe.sh /
+RUN chmod +x /livenessprobe.sh
 
 COPY nginx-script.sh /
 RUN chmod +x nginx-script.sh

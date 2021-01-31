@@ -1,10 +1,11 @@
-#!/bin/ash
-service nginx status
-return_nginx=$?
-service sshd status
-return_sshd=$?
-if [ $return_nginx = 0 ] && [ $return_sshd = 0 ]; then
-	exit 0
+#!/bin/sh
+
+if [[ $(ps | grep -v "grep" | grep -c "nginx") == 0 ]]; then
+    exit 1
+elif [[ $(ps | grep -v "grep" | grep -c "sshd") == 0 ]]; then
+    exit 1
+elif [[ $(ps | grep -v "grep" | grep -c "telegraf") == 0 ]]; then
+    exit 1
 else
-	exit 1
+    exit 0
 fi

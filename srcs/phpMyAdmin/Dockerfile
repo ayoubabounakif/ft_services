@@ -17,11 +17,6 @@ RUN chown -R aabounak:aabounak /var/lib/nginx
 RUN mkdir -p /run/nginx
 RUN touch /run/nginx/nginx.pid
 
-# Process Manager
-# ADD livenessprobe.sh /
-# RUN apk add --no-cache supervisor
-# COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
 ADD https://dl.influxdata.com/telegraf/releases/telegraf-1.17.0_linux_amd64.tar.gz /
 RUN tar xf telegraf-1.17.0_linux_amd64.tar.gz
 RUN rm telegraf-1.17.0_linux_amd64.tar.gz
@@ -37,6 +32,10 @@ COPY config.inc.php /var/aabounak/phpMyAdmin-5.0.4-all-languages
 RUN chown -R aabounak:aabounak /var/aabounak/phpMyAdmin-5.0.4-all-languages
 RUN mkdir -p /var/aabounak/phpMyAdmin-5.0.4-all-languages/tmp/
 RUN sudo chmod 777 /var/aabounak/phpMyAdmin-5.0.4-all-languages/tmp/
+
+# Process Manager
+COPY livenessprobe.sh /
+RUN chmod +x /livenessprobe.sh
 
 EXPOSE 5000
 

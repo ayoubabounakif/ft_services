@@ -35,17 +35,13 @@ spec:
       containers:
         - name: ftps
           image: local-ftps
-          args:
-          - /bin/ash
-          - -c
-          - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 30
           livenessProbe:
-            exec:
-              command:
-              - cat
-              - /tmp/healthy
-            initialDelaySeconds: 5
-            periodSeconds: 5
+              exec:
+                command:
+                  - /bin/sh
+                  - /livenessprobe.sh
+              initialDelaySeconds: 5
+              periodSeconds: 5
           imagePullPolicy: Never
           ports:
             - containerPort: 21

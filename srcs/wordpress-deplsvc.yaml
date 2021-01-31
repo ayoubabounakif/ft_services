@@ -28,17 +28,13 @@ spec:
         - name: wordpress
           image: local-wordpress
           imagePullPolicy: Never
-          args:
-          - /bin/ash
-          - -c
-          - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
           livenessProbe:
-            exec:
-              command:
-              - cat
-              - /tmp/healthy
-            initialDelaySeconds: 5
-            periodSeconds: 5
+              exec:
+                command:
+                  - /bin/sh
+                  - /livenessprobe.sh
+              initialDelaySeconds: 10
+              periodSeconds: 5
           ports:
             - containerPort: 5050
   selector:

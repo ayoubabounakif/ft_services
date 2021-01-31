@@ -17,11 +17,6 @@ RUN chown -R aabounak:aabounak /var/lib/nginx
 RUN mkdir -p /run/nginx
 RUN touch /run/nginx/nginx.pid
 
-# Process Manager
-# ADD livenessprobe.sh /
-# RUN apk add --no-cache supervisor
-# COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
 ADD https://dl.influxdata.com/telegraf/releases/telegraf-1.17.0_linux_amd64.tar.gz /
 RUN tar xf telegraf-1.17.0_linux_amd64.tar.gz
 RUN rm telegraf-1.17.0_linux_amd64.tar.gz
@@ -35,6 +30,10 @@ RUN tar xzvf latest.tar.gz
 RUN rm -rf latest.tar.gz
 RUN mv wordpress/ /var/aabounak
 COPY wp-config.php /var/aabounak/wordpress/
+
+# Process Manager
+COPY livenessprobe.sh /
+RUN chmod +x /livenessprobe.sh
 
 EXPOSE 5050
 

@@ -18,6 +18,10 @@ RUN rm telegraf-1.17.0_linux_amd64.tar.gz
 RUN mkdir -p /etc/telegraf
 COPY telegraf.conf /etc/telegraf/telegraf.conf
 
+# Process Manager
+COPY livenessprobe.sh /
+RUN chmod +x /livenessprobe.sh
+
 COPY grafana-script.sh /
 RUN sudo chmod +x /grafana-script.sh
 
