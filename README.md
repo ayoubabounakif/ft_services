@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=qmDzcu5uY1I
 > *PASV:* https://www.webopedia.com/definitions/pasv/<br/>
 > *Reverse Proxy (Theory):* https://www.nginx.com/resources/glossary/reverse-proxy-vs-load-balancer/<br/>
 > *Reverse Proxy (Execution):* https://www.linode.com/docs/guides/use-nginx-reverse-proxy/<br/>
-> *SSH :*https://forhjy.medium.com/42-ft-services-install-nginx-with-kubernetes-fd22a5fcb062<br/>
+> *SSH:* https://forhjy.medium.com/42-ft-services-install-nginx-with-kubernetes-fd22a5fcb062<br/>
 > *Liveness Probe:* https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/<br/>
 
 **4 - StackOverFlow:**<br/>
