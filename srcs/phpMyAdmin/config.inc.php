@@ -11,11 +11,13 @@
  */
 declare(strict_types=1);
 
+// This is for reverse proxy
+$cfg['PmaAbsoluteUri'] = "./";
+
 /**
  * This is needed for cookie based authentication to encrypt password in
  * cookie. Needs to be 32 chars long.
  */
-$cfg['PmaAbsoluteUri'] = "./";
 $cfg['blowfish_secret'] = 'szE-p,FPUWX[Eik9talKP9c06.Xk;p}t'; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /**
