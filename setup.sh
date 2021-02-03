@@ -18,14 +18,14 @@ then
 fi
 
 # INSTALL DOCKER
-if [[ ! -f "$DOCKER_HOME" || -d "$DOCKER_GOINFRE" ]]ß;
+if [[ ! -f "$DOCKER_HOME" || -d "$DOCKER_GOINFRE" ]];
 then
 	echo "----Installing Docker----"
 	rm -rf $DOCKER_HOME && mkdir $DOCKER_GOINFRE
 	ln -s $DOCKER_GOINFRE $DOCKER_HOME
 	brew install docker docker-machine
 	docker-machine create --driver virtualbox default
-fiß
+fi
 
 # INSTALL MINIKUBE
 if [[ ! -f "$MINIKUBE_HOME" || -d "$MINIKUBE_GOINFRE" ]];
