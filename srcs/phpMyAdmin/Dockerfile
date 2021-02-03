@@ -35,7 +35,7 @@ RUN sudo chmod 777 /var/aabounak/phpMyAdmin-5.0.4-all-languages/tmp/
 
 # Process Manager
 COPY livenessprobe.sh /
-RUN chmod +x /livenessprobe.sh
+RUN sudo chmod +x /livenessprobe.sh
 
 EXPOSE 5000
 

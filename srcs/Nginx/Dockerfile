@@ -23,7 +23,7 @@ COPY index.html /www/index.html
 
 # Process Manager
 COPY livenessprobe.sh /
-RUN chmod +x /livenessprobe.sh
+RUN sudo chmod +x /livenessprobe.sh
 
 COPY nginx-script.sh /
 RUN chmod +x nginx-script.sh

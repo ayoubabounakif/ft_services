@@ -26,7 +26,7 @@ COPY telegraf.conf /etc/telegraf/telegraf.conf
 
 # Process Manager
 COPY livenessprobe.sh /
-RUN chmod +x /livenessprobe.sh
+RUN sudo chmod +x /livenessprobe.sh
 
 COPY influxdb-script.sh /
 RUN sudo chmod +x /influxdb-script.sh

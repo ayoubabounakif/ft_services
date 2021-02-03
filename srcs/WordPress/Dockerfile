@@ -33,7 +33,7 @@ COPY wp-config.php /var/aabounak/wordpress/
 
 # Process Manager
 COPY livenessprobe.sh /
-RUN chmod +x /livenessprobe.sh
+RUN sudo chmod +x /livenessprobe.sh
 
 EXPOSE 5050
 

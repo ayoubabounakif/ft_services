@@ -17,7 +17,7 @@ COPY pma_tables.sql /
 
 # Process Manager
 COPY livenessprobe.sh /
-RUN chmod +x /livenessprobe.sh
+RUN sudo chmod +x /livenessprobe.sh
 
 COPY mysql-script.sh /
 RUN sudo chmod +x /mysql-script.sh

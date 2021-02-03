@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [[ $(ps | grep -v "grep" | grep -c "nginx") == 0 ]]; then
+if [[ $(ps | grep -v "grep" | grep -v "sh" | grep -c "nginx") == 0 ]]; then
     exit 1
-elif [[ $(ps | grep -v "grep" | grep -c "php-fpm7") == 0 ]]; then
+elif [[ $(ps | grep -v "grep" | grep -v "sh" | grep -c "php-fpm7") == 0 ]]; then
     exit 1
-elif [[ $(ps | grep -v "grep" | grep -c "telegraf") == 0 ]]; then
+elif [[ $(ps | grep -v "grep" | grep -v "sh" | grep -c "telegraf") == 0 ]]; then
     exit 1
 else
     exit 0

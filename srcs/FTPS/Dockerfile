@@ -23,7 +23,7 @@ COPY vsftpd.pem /etc/ssl/
 
 # Process Manager
 COPY livenessprobe.sh /
-RUN chmod +x /livenessprobe.sh
+RUN sudo chmod +x /livenessprobe.sh
 
 COPY ftps-script.sh /
 RUN sudo chmod +x /ftps-script.sh
