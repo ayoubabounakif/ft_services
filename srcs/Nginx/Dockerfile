@@ -22,11 +22,11 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 COPY index.html /www/index.html
 
 # Process Manager
-COPY livenessprobe.sh /
-RUN sudo chmod +x /livenessprobe.sh
+# COPY livenessprobe.sh /
+# RUN sudo chmod +x /livenessprobe.sh
 
-COPY nginx-script.sh /
-RUN chmod +x nginx-script.sh
+COPY script.sh /
+RUN chmod +x script.sh
 
 RUN openssl req -x509 -nodes -days 365 -subj "/C=MA/ST=BG/O=aabounak, Inc./CN=localhost" -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 
@@ -45,4 +45,4 @@ EXPOSE 80
 EXPOSE 443
 EXPOSE 22
 
-ENTRYPOINT ["sh", "/nginx-script.sh"]
+ENTRYPOINT ["bash", "/script.sh"]

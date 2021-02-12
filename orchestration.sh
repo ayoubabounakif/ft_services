@@ -33,6 +33,7 @@ kubectl apply -f srcs/ftps-deplsvc.yaml
 
 
 kubectl get pods
+minikube dashboard &
 
 sed -i '' s/$(minikube ip)/CIP/g ./srcs/metallb-configmap.yaml
 sed -i '' s/$(minikube ip)/CIP/g ./srcs/Nginx/default.conf

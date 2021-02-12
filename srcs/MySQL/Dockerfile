@@ -16,12 +16,12 @@ COPY wp_database.sql /
 COPY pma_tables.sql /
 
 # Process Manager
-COPY livenessprobe.sh /
-RUN sudo chmod +x /livenessprobe.sh
+# COPY livenessprobe.sh /
+# RUN sudo chmod +x /livenessprobe.sh
 
-COPY mysql-script.sh /
-RUN sudo chmod +x /mysql-script.sh
+COPY script.sh /
+RUN sudo chmod +x /script.sh
 
 EXPOSE 3306
 
-ENTRYPOINT ["sh", "/mysql-script.sh"]
+ENTRYPOINT ["bash", "/script.sh"] 

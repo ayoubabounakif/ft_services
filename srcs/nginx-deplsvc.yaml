@@ -41,12 +41,5 @@ spec:
       - name: nginx
         image: local-nginx
         imagePullPolicy: Never
-        livenessProbe:
-            exec:
-              command:
-                - /bin/bash
-                - /livenessprobe.sh
-            initialDelaySeconds: 10
-            periodSeconds: 5
         ports:
         - containerPort: 80

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 20s
+
 if [[ $(ps | grep -v "grep" | grep -v "sh" | grep -v "logger -t mysqld -p daemon.error" | grep -c "mysqld") == 0 ]]; then
     exit 1
 elif [[ $(ps | grep -v "grep" | grep -v "sh" | grep -c "telegraf") == 0 ]]; then
