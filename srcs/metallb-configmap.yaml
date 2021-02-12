@@ -10,4 +10,4 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - CIP-CIP
+      - 192.168.99.254-192.168.99.254

@@ -43,7 +43,10 @@ echo	"export MINIKUBE_HOME=\"/Users/$USER/goinfre/.minikube\""	>> ~/.zshrc
 echo	"export MACHINE_STORAGE_PATH=\"/Users/$USER/goinfre/.docker\""	>> ~/.zshrc
 
 # START
-minikube start
+# minikube start
 # docker-machine start
 # eval $(docker-machine env default)
-eval $(minikube -p minikube docker-env)
+# eval $(minikube -p minikube docker-env)
+
+# BUILDING LOCAL IMAGES AND APPLYING YAML FILE
+sh ./orchestration.sh
