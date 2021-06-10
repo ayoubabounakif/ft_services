@@ -1,5 +1,7 @@
 # 42cursus-ft_services
 
+This project consist to clusturing an docker-compose application and deploy it with Kubernetes.
+
 **1 - Kubernetes Tutorial:**<br/>
 > *Nana:* https://www.youtube.com/watch?v=X48VuDVv0do<br/>
 > *Important Kuberetes Concepts:* https://kubernetes.io/docs/concepts/<br/>
